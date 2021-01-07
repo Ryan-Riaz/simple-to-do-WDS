@@ -24,6 +24,7 @@ function App() {
     // for referencing input reference
     const todoRef = useRef();
 
+    // add todo in todo list
     const handleAddToDo = () => {
         const name = todoRef.current.value;
         if (name === "") return;
@@ -34,11 +35,13 @@ function App() {
         todoRef.current.value = null;
     };
 
+    // remove todo from todo list
     const handleClearToDO = () => {
         const newToDos = todos.filter((todo) => !todo.complete);
         setTodos(newToDos);
     };
 
+    // track if a todo done or not
     const toggleToDO = (id) => {
         const newToDos = [...todos];
         const todo = newToDos.find((todo) => todo.id === id);
