@@ -1,5 +1,6 @@
 import Todo from "./Todo";
 
+// toggleToDo is from ./app is called props drilling
 const TodoList = ({ todos, toggleToDO }) => {
     return (
         <div>
