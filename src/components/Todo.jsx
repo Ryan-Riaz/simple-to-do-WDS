@@ -6,7 +6,15 @@ const Todo = ({ todo, toggleToDO }) => {
                 checked={todo.complete}
                 onChange={() => toggleToDO(todo.id)}
             />
-            <span>{todo.name}</span>
+            <span
+                style={
+                    todo.complete
+                        ? { textDecoration: "line-through" }
+                        : { textDecoration: "none" }
+                }
+            >
+                {todo.name}
+            </span>
         </div>
     );
 };
