@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { v4 as uuid } from "uuid";
 import TodoList from "./components/TodoList";
 
+// local storage const key
 const LOCAL_STORAGE_KEY = "todo.app";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
     }, [todos]);
 
+    // for referencing input reference
     const todoRef = useRef();
 
     const handleAddToDo = () => {
